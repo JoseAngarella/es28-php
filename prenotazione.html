@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prenotazione Ristorante</title>
+</head>
+
+<body>
+    <h1>Prenota il tuo Tavolo</h1>
+    <form action="gestioneprenotazione.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required><br><br>
+
+        <label for="cognome">Cognome:</label>
+        <input type="text" name="cognome" required><br><br>
+
+        <label for="tavolo">Numero Tavolo:</label>
+        <select name="tavolo" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <label for="orario">Orario:</label>
+        <input type="time" name="orario" required><br><br>
+
+        <label for="note">Eventuali Note:</label><br>
+        <textarea name="note"></textarea><br><br>
+
+        <label>Menu:</label><br>
+        <input type="checkbox" name="antipasto" value="1"> Antipasto (5€)<br>
+        <input type="checkbox" name="primo" value="1"> Primo (6€)<br>
+        <input type="checkbox" name="secondo" value="1"> Secondo (7€)<br><br>
+
+        <label>Parcheggio:</label><br>
+        <input type="radio" name="parcheggio" value="non custodito"> Non custodito (+3€)<br>
+        <input type="radio" name="parcheggio" value="custodito"> Custodito (+5€)<br>
+        <input type="radio" name="parcheggio" value="nessuno" checked> Nessuno<br><br>
+
+        <input type="submit" value="Prenota">
+    </form>
+</body>
+
+</html>
